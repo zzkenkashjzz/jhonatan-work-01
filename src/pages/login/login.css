@@ -1,0 +1,59 @@
+.login-container {
+    height: 100vh;
+    position: relative;
+}
+
+.login-logo {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+}
+
+.login-email-item {
+    margin-bottom: 4px;
+    padding-top: 10px;
+}
+
+.login-password-item {
+    margin-bottom: 4px;
+}
+
+.login-error {
+    margin-bottom: 4px;
+}
+
+.request-password-error {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.reset-password-error {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.reset-password-item {
+    margin-bottom: 4px;
+    padding-top: 10px;
+}
+
+.login-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-title {
+    margin-top: 10px;
+    font-family: 'Trebuchet MS';
+    font-size: 12pt;
+}
+
+.login-divider {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.login-button-container {
+    margin-top: 15px;
+}

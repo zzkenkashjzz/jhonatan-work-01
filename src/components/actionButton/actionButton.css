@@ -1,0 +1,11 @@
+.action_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    size: 32px;
+}
+
+.active {
+    border-left: 5px solid #c4c4c4;
+}

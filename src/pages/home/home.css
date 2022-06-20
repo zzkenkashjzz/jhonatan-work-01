@@ -1,0 +1,507 @@
+.home-welcome-text {
+    font-weight: 500 !important;
+    font-size: 1.3em !important;
+}
+
+.home-profile-description-text {
+    color: red !important;
+}
+
+.home-introduction-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+}
+
+.home-introduction-card-icon {
+    margin-right: 5px !important;
+}
+
+.home-introduction-title {
+    font-size: 20px !important;
+}
+
+.home-document-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+    /* overflow: auto; */
+}
+
+.home-document-card-header {
+    text-align: left;
+}
+
+.home-document-card-icon {
+    margin-right: 5px !important;
+}
+
+.home-document-title-description {
+    color: gray !important;
+}
+
+.home-document-video-icon {
+    color: red !important;
+}
+
+.home-document-text-icon {
+    color: #E8833A !important;
+}
+
+.home-document-competitor {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(219, 219, 219, 0.5);
+}
+
+.home-document-competitor-button {
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+.home-listing-main-row {
+    margin-top: 10px !important;
+}
+
+.home-listing-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.home-listing-card-content {
+    float: left !important;
+}
+
+.home-listing-title {
+    font-size: 20px !important;
+    margin-right: 10px !important;
+}
+
+.home-listing-title-icon {
+    margin-right: 5px !important;
+}
+
+.home-listing-title-description {
+    color: gray !important;
+}
+
+.home-listing-buttons {
+    float: right !important;
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+.home-listing-table-parent {
+    margin-top: 10px !important;
+}
+
+.home-listing-table-avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.home-listing-table-state-description {
+    margin-left: 10px;
+}
+
+.home-listing-table-stock-empty {
+    color: grey;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.home-listing-table-stock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-listing-table-stock-number {
+    margin-right: 5px;
+}
+
+.home-listing-table-stock-progress {
+    width: 40px;
+}
+
+.home-billing-parent {
+    margin-top: 10px !important;
+}
+
+.home-billing-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 250px !important;
+}
+
+.home-billing-card-title {
+    float: left !important;
+}
+
+.home-billing-card-title-text {
+    font-size: 20px !important;
+    margin-right: 10px !important;
+}
+
+.home-account-billing-card-title-icon {
+    margin-right: 5px !important;
+}
+
+.home-billing-card-title-description {
+    color: gray !important;
+}
+
+.home-billing-buttons {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.home-billing-cell-parent {
+    margin-top: 10px !important;
+}
+
+.home-billing-cell-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 150px !important;
+    background-color: #F8F8F9 !important;
+}
+
+.home-billing-cell-id {
+    color: #C3CFD9 !important;
+}
+
+.home-billing-cell-title {
+    font-size: 16px !important;
+}
+
+.home-billing-cell-amount {
+    font-size: 16px !important;
+    color: gray !important;
+    font-weight: 600 !important;
+}
+
+.home-billing-cell-status {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.home-billing-cell-button {
+    color: #5365E3 !important;
+}
+
+.home-account-summary-parent {
+    margin-top: 10px !important;
+}
+
+.home-account-summary-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 250px !important;
+}
+
+.home-account-summary-card-column {
+    text-align: left !important;
+}
+
+.home-account-summary-card-title {
+    font-size: 20px !important;
+    margin-right: 10px !important;
+}
+
+.home-account-summary-card-title-icon {
+    margin-right: 5px !important;
+}
+
+.home-account-summary-card-title-description {
+    color: gray !important;
+}
+
+.home-account-summary-cell-sales-card {
+    width: auto !important;
+    margin: 10px !important;
+    min-height: 250px !important;
+    background-color: #F8F8F9 !important;
+}
+
+.home-account-summary-cell-sales-card-item {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.home-account-summary-cell-orders-card {
+    width: auto !important;
+    margin: 10px !important;
+    min-height: 250px !important;
+    background-color: #F8F8F9 !important;
+}
+
+.home-account-summary-cell-orders-card-item {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.home-account-summary-cell-listings-card {
+    width: auto !important;
+    margin: 10px !important;
+    min-height: 350px !important;
+    background-color: #F8F8F9 !important;
+}
+
+.home-account-summary-cell-listings-card-item {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.home-account-summary-cell-listings-card-item-icon {
+    margin-right: 5px !important;
+}
+
+.home-account-summary-cell-products-card {
+    width: auto !important;
+    margin: 10px !important;
+    min-height: 150px !important;
+    background-color: #F8F8F9 !important;
+}
+
+.home-account-summary-cell-products-card-item {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.home-stock-modal-listing-column {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.home-stock-modal-stock-order {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.home-stock-modal-stock-add {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.home-stock-modal-stock-result {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+.home-stock-modal-stock-add-item {
+    float: right !important;
+}
+
+.home-support-parent {
+    margin-top: 10px !important;
+}
+
+.home-support-card {
+    width: auto !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    min-height: 250px !important;
+}
+
+.home-support-card-title-content {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.home-support-card-title {
+    float: left !important;
+}
+
+.home-support-card-title-text {
+    font-size: 20px !important;
+    margin-right: 10px !important;
+}
+
+.home-support-card-title-icon {
+    vertical-align: sub !important;
+    margin-right: 5px !important;
+}
+
+.home-support-card-title-description {
+    color: gray !important;
+}
+
+.home-support-main-row {
+    margin-top: 50px !important;
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+.home-support-chile-branch {
+    text-align: left !important;
+    background-color: #f0f0f073 !important;
+    padding: 20px !important;
+    margin-right: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    border-radius: 20px !important;
+}
+
+.home-support-eeuu-branch {
+    text-align: left !important;
+    background-color: #f0f0f073 !important;
+    padding: 20px !important;
+    margin-right: 20px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+}
+
+.home-support-branch-title {
+    font-family: 'Trebuchet MS' !important;
+    font-weight: bolder !important;
+}
+
+.home-support-branch-info {
+    font-family: 'Trebuchet MS' !important;
+}
+
+.home-support-send-message {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    background-color: #f0f0f073 !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+}
+
+.home-support-form {
+    margin-top: 10px !important;
+}
+
+.ant-select-selection-placeholder {
+    text-align: left !important;
+}
+
+.ant-select-selection-item {
+    text-align: left !important;
+}
+
+.home-support-form-title {
+    align-self: flex-start !important;
+}
+
+.home-support-form-item-divider {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    margin-bottom: 10px !important;
+}
+
+.home-support-form-item-message {
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+}
+
+.home-support-form-item-button {
+    text-align: right !important;
+    margin-bottom: 10px !important;
+}
+
+.home-support-form-item-textarea {
+    min-height: 100px !important;
+    max-height: 100px !important;
+}
+
+.home-support-form-item-textarea-length {
+    margin: 0 !important;
+    font-size: 12px !important;
+    float: right !important;
+    color: #a1a1a1 !important;
+    margin-right: 5px !important;
+    align-self: flex-end !important;
+}
+
+.home-support-form-button {
+    background-color: #FFFF !important;
+}
+
+.home-custom-empty-table-container {
+    text-align: center !important;
+    margin-top: 50px !important;
+}
+
+.home-custom-empty-table-title {
+    font-size: 20px !important;
+    color: black !important;
+}
+
+.home-custom-empty-table-instructions {
+    color: gray !important;
+}
+
+.home-custom-empty-table-button {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.home-custom-empty-table-icon {
+    margin-right: 5px !important;
+}
+
+.color-grey{
+    color: gray !important;
+}
+
+.home-clients-table-open-documents-button {
+    color: #5365E3 !important;
+}
+
+.home-listing-table .ant-table-thead .ant-table-cell {
+    color: grey;
+    border-bottom: 2px solid #8b8b8b;
+}
+
+.font-size-titles { 
+    font-size: "20px;"
+}
+
+.home-modal-titles {
+    color: "grey";
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.green {
+    background-color: rgb(13, 173, 61);
+}
+
+.orange {
+    background-color: rgb(226, 152, 40);
+}
+
+.contentVideo {
+    width: 100%;
+    height: 400px;
+}

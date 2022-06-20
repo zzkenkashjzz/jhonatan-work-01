@@ -1,0 +1,23 @@
+.table-chart {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-style: normal;
+}
+
+
+td, th {
+    padding: 15px 5px;
+
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.border-bottom{
+    border-bottom: solid 2px;
+}

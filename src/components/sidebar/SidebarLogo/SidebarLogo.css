@@ -1,0 +1,13 @@
+.sidebar_logo {
+    flex-grow: 4;
+    display: flex;
+    justify-content: center;
+    margin-top: 40%;
+}
+
+.sidebar_logo_image {
+    width: 55px;
+    height: 55px;
+    background: #bab7b7;
+    border-radius:4px
+}

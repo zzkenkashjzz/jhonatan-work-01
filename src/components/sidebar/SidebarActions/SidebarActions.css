@@ -1,0 +1,17 @@
+/* estilos aaplicaados en la seccion de acciones del sidebar -START */
+
+.sidebar_actions {
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.sidebar_actions_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* estilos aaplicaados en la seccion de acciones del sidebar - END */
