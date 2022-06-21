@@ -1,4 +1,5 @@
 .barChart {
-    height: 250px;
+    height: 285px;
     display: flex;
+    width: 100%;
 }

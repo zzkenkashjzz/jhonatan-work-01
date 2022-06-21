@@ -12,6 +12,7 @@ import Marketing from './components/Marketing';
 import Visits from './components/Visits';
 import AnalyticsFilter from './components/AnalyticsFilter';
 import DashboardTable from './components/DashboardTable';
+import {ChartsView} from "./components/ChartsView";
 
 export const Analytics = () => {
 
@@ -48,7 +49,14 @@ export const Analytics = () => {
                 </Layout>
             </Row>
             <Row>
-            <Layout className="padding-layout" style={{ width: '100%' }}>
+                <Layout className="padding-layout" style={{ width: '100%' }}>
+                    <div className="site-layout-background padding-layout-content content-padding" style={{ width: '100%' }}>
+                        <ChartsView/>
+                    </div>
+                </Layout>
+            </Row>
+            <Row>
+                <Layout className="padding-layout" style={{ width: '100%' }}>
                     <div className="site-layout-background padding-layout-content content-padding" style={{ width: '100%' }}>
                         <Col span={24} xs={24} sm={24} md={24}>
                             <DashboardTable></DashboardTable>

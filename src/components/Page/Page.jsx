@@ -5,7 +5,7 @@ import BarChart from "../BarChart/BarChart";
 import WelcomeLayout from "./WelcomeLayout/WelcomeLayout";
 import {AiOutlineSync} from "react-icons/ai";
 import {TABLE_DATA as tableData, TABLE_COLUMNS as tableColumns} from "../../services/table-data";
-import {BAR_CHART_CONFIG as chartConfig} from "../../services/barchart-data";
+import {BAR_CHART_DATA as chartConfig} from "../../services/barchart-data";
 import ProgressChartList from "../ProgressChartList/ProgressChartList";
 import {PROGRESS_DATA_LIST as progressList} from "../../services/progress-data";
 
@@ -20,7 +20,7 @@ const Page = () => (
       </div>
 
       <div className="row">
-          <BarChart chartConfig={chartConfig}/>
+          <BarChart data={chartConfig}/>
           <ProgressChartList progressList={progressList}  />
       </div>
 

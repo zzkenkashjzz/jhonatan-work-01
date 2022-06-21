@@ -17,3 +17,29 @@ export const PROGRESS_DATA_LIST= [
         leftLabel: 'Inversion'
     }
 ]
+
+export const PieData =  [
+    {
+        type: 'SKU 1',
+        value: 27,
+    },
+    {
+        type: 'SKU 2',
+        value: 25,
+    },
+    {
+        type: 'SKU 3',
+        value: 18,
+    },
+];
+
+export const PieData2 =  [
+    {
+        type: 'SKU 1',
+        value: 80,
+    },
+    {
+        type: 'SKU 2',
+        value: 25,
+    },
+];

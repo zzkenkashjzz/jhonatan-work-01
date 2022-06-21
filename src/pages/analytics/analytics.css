@@ -48,3 +48,8 @@
     width: '50%';
     text-align: 'left';
 }
+
+.analytics-chart-view-tops-col {
+    height: 335px;
+    overflow: auto;
+}

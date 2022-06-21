@@ -26,3 +26,8 @@ code {
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
     'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+.card-title-custom-title {
+  text-align: initial;
+  text-transform: uppercase;
+}

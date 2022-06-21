@@ -107,3 +107,46 @@ export const TABLE_COLUMNS = [
         key: 'acos',
     },
 ]
+
+export const TableTopData = [
+    {
+        name: 'Camiseta - 12345',
+        units: 10
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 9
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 8
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 7
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 6
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 5
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 4
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 3
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 2
+    },
+    {
+        name: 'Camiseta - 12345',
+        units: 1
+    }
+]
