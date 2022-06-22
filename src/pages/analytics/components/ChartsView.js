@@ -23,10 +23,10 @@ export const ChartsView = () => {
                     <PieChart data={PieData} staticContent={'+10.10%'} title="Más vendidos" />
                 </Col>
                 <Col span={6}>
-                    <PieChart data={PieData2} staticContent={'+12.48%'} title="Más vendidos"/>
+                    <PieChart data={PieData2} staticContent={'+12.48%'} title="Top Marketplace $"/>
                 </Col>
                 <Col span={6}>
-                    <PieChart data={PieData} staticContent={'-30.35%'} title="Más vendidos"/>
+                    <PieChart data={PieData} staticContent={'-30.35%'} title="Top Paises $"/>
                 </Col>
             </Row>
         </>

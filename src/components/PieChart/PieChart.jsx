@@ -15,7 +15,17 @@ export const PieChart = ({data, staticContent = '', title = 'Not title'}) => {
         radius: 1,
         innerRadius: 0.9,
         legend: true,
-        label: true,
+        label: {
+            type: 'inner',
+            offset: '-30%',
+            content: function content(_ref) {
+                return ''.concat(_ref.value, '$');
+            },
+            style: {
+                fontSize: 10,
+                textAlign: 'center',
+            },
+        },
         interactions: [
             {
                 type: 'element-selected',

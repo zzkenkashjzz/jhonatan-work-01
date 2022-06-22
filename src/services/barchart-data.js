@@ -13,7 +13,7 @@ export const BAR_CHART_DATA = [
     },
     {
         type: 'Abr',
-        sales: 125,
+        sales: 125  ,
     },
     {
         type: 'May',
