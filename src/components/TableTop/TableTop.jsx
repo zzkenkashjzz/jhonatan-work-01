@@ -10,14 +10,16 @@ export const TableTop = ({topData = [], range = [0, 10], title}) => {
                 <h3 className="card-title-custom-title" >{title}</h3>
             </CardHeader>
             <CardBody>
-                <div style={{overflow: 'auto', height: "285px"}}>
-                    <table>
+                <div style={{overflow: 'none', height: "285px"}}>
+                    <table className="table-top">
                         <tr className="table-top-header">
+                            <th>#</th>
                             <th>Nombre del producto - SKU</th>
                             <th>Cantidad</th>
                         </tr>
-                        {topData.slice(range[0], range[1]).map(data => (
-                            <tr>
+                        {topData.slice(range[0], range[1]).map((data, index) => (
+                            <tr key={index}>
+                                <td>{index + 1}</td>
                                 <td>{data.name}</td>
                                 <td>{data.units}</td>
                             </tr>

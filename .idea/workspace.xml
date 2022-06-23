@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ef2a61fc-12b0-4580-8207-3b056a2cd3ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PieChart/PieChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChart/PieChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TableTop/TableTop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TableTop/TableTop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TableTop/TableTop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TableTop/TableTop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/analytics/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/analytics/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/analytics/analytics.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/analytics/analytics.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/analytics/components/ChartsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/analytics/components/ChartsView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/barchart-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/barchart-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/progress-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/progress-data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +65,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -93,6 +104,7 @@
       <updated>1655754439703</updated>
       <workItem from="1655754440992" duration="13832000" />
       <workItem from="1655932484811" duration="4504000" />
+      <workItem from="1655948703580" duration="8840000" />
     </task>
     <servers />
   </component>

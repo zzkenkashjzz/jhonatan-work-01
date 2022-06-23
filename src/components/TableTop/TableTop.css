@@ -2,4 +2,25 @@
     position: sticky;
     top: 0;
     background-color: white;
+    text-align: justify;
+}
+
+.table-top {
+    text-align: initial;
+}
+
+.table-top td {
+    padding: 3px;
+}
+
+.table-top th {
+    padding: 2px 2px 10px;
+}
+
+tr {
+    border-radius: 4px;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
 }

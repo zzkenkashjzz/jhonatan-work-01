@@ -3,3 +3,11 @@
     display: flex;
     width: 100%;
 }
+
+.g2-tooltip-title {
+    text-align: start;
+}
+
+.g2-tooltip-marker {
+    background: #3be5a6 !important
+}

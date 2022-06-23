@@ -5,36 +5,55 @@ import CardBody from "../card/cardBody/Card/cardBody";
 import { Column } from '@ant-design/plots';
 import CardHeader from "../card/cardHeader/Card/cardHeader";
 
-const BarChart = ({data = [], title}) => {
+const BarChart = ({data = [], title, yLabel, xLabel}) => {
+
+    const max = Math.max(...data.map(item => item[yLabel]))
 
     const config = {
         data,
-        xField: 'type',
-        yField: 'sales',
+        xField: xLabel,
+        yField: yLabel,
         columnWidthRatio: 0.8,
+
         xAxis: {
+            grid: null,
             label: {
                 autoHide: true,
                 autoRotate: false,
+                style: {
+                    fill: '#020c33',
+                    fontSize: 15,
+                }
             },
         },
+        yAxis: {
+            grid: null,
+            max: max + 1,
+            label: {
+                style: {
+                    opacity: 0
+                }
+            }
+        },
         columnStyle: {
-            fill: '#d9d9d9',
+            fill: '#e8e8e8',
         },
         label: {
-            // 可手动配置 label 数据标签位置
             position: 'top',
-            // 'top', 'bottom', 'middle',
-            // 配置样式
             style: {
                 fill: '#3be5a6',
-                opacity: 0.6,
+                opacity: 1,
             },
         },
         interactions: [
             {
+                enable: true,
                 type: "active-region",
-                enable: false,
+                cfg: {
+                    style: {
+                        fill: '#3be5a6',
+                    }
+                }
             },
         ],
     }

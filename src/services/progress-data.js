@@ -35,11 +35,26 @@ export const PieData =  [
 
 export const PieData2 =  [
     {
-        type: 'SKU 1',
+        type: 'Amazon',
         value: 80,
     },
     {
-        type: 'SKU 2',
+        type: 'Ebay',
         value: 25,
+    },
+];
+
+export const PieData3 =  [
+    {
+        type: 'Colombia',
+        value: 27,
+    },
+    {
+        type: 'Brazil',
+        value: 25,
+    },
+    {
+        type: 'Venezuela',
+        value: 18,
     },
 ];

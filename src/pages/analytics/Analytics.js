@@ -49,8 +49,8 @@ export const Analytics = () => {
                 </Layout>
             </Row>
             <Row>
-                <Layout className="padding-layout" style={{ width: '100%' }}>
-                    <div className="site-layout-background padding-layout-content content-padding" style={{ width: '100%' }}>
+                <Layout className="padding-layout padding-y-0" style={{ width: '100%' }}>
+                    <div className="site-layout-background padding-layout-content content-padding margin-top-0 padding-y-0" style={{ width: '100%' }}>
                         <ChartsView/>
                     </div>
                 </Layout>
