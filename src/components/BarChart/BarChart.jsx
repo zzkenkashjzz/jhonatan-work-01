@@ -4,8 +4,10 @@ import Card from "../card/Card";
 import CardBody from "../card/cardBody/Card/cardBody";
 import { Column } from '@ant-design/plots';
 import CardHeader from "../card/cardHeader/Card/cardHeader";
+import {Select} from "antd";
+import {Option} from "antd/es/mentions";
 
-const BarChart = ({data = [], title, yLabel, xLabel}) => {
+const BarChart = ({data = [], title, yLabel, xLabel, onDataClick}) => {
 
     const max = Math.max(...data.map(item => item[yLabel]))
 
@@ -58,15 +60,36 @@ const BarChart = ({data = [], title, yLabel, xLabel}) => {
         ],
     }
 
+    const  handlePlotClick = (e) => {
+        if (onDataClick && e.type === "plot:click") onDataClick(e)
+    }
+
     return (
         <div>
             <Card>
                 <CardHeader>
-                    <h3 className="card-title-custom-title">{title}</h3>
+                    <div className='barChart-header-card'>
+                        <h3 className="card-title-custom-title">{title}</h3>
+                        <Select
+                            defaultValue="mes"
+                            style={{
+                                width: 120,
+                                marginLeft: 'auto'
+                            }}
+                            onChange={(e) => console.log(e)}
+                        >
+                            <Option value="jack">Jack</Option>
+                            <Option value="mes">Mes</Option>
+                            <Option value="disabled" disabled>
+                                Disabled
+                            </Option>
+                            <Option value="Yiminghe">yiminghe</Option>
+                        </Select>
+                    </div>
                 </CardHeader>
                 <CardBody>
                     <div className="barChart">
-                        <Column style={{width: '100%'}} {...config} />
+                        <Column style={{width: '100%'}} {...config} onEvent={(chart , event) => handlePlotClick(event)} />
                     </div>
                 </CardBody>
             </Card>

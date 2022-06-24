@@ -12,9 +12,15 @@ export const PieChart = (
         unitBasePrefix = '',
         title = 'Not title',
         legendPosition = 'bottom', // right
+        onDataClick
     }
 ) => {
     const total = data.map(item => item.value).reduce((a, b) => a + b, 0);
+
+    const  handlePlotClick = (e) => {
+        if (onDataClick && e.type === "plot:click") onDataClick(e)
+    }
+
     const config = {
         appendPadding: 10,
         data,
@@ -27,7 +33,7 @@ export const PieChart = (
             type: 'inner',
             offset: '-50%',
             content: function content(_ref) {
-                return `${unitBasePrefix}`.concat(_ref.value, unitBaseSuffix);
+                return `${Math.trunc(_ref.percent * 100)}%`;
             },
             autoRotate: false,
             style: {
@@ -57,7 +63,16 @@ export const PieChart = (
         },
         legend: {
             layout: legendPosition === 'bottom' ? 'horizontal' : 'vertical',
-            position: legendPosition
+            position: legendPosition,
+            itemValue: {
+                formatter: (text, item) => {
+                    const items = data.filter((d) => d.type === item.value)[0];
+                    return `- ${items.value}`
+                },
+                // style: {
+                //     opacity: 0.65,
+                // },
+            },
         }
     };
     return (
@@ -66,7 +81,7 @@ export const PieChart = (
                 <h3 className="pie-chart-title">{title}</h3>
             </CardHeader>}
             <CardBody>
-                <Pie {...config} />
+                <Pie {...config} onEvent={(chart , event) => handlePlotClick(event)} />
             </CardBody>
         </Card>)
 }

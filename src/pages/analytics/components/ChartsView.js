@@ -8,25 +8,28 @@ import {PieChart} from "../../../components/PieChart/PieChart";
 import {PieData, PieData2, PieData3} from "../../../services/progress-data";
 
 export const ChartsView = () => {
+
+    const handlePointClick = (e) => console.log(e);
+
     return (
         <>
             <Row>
                 <Col span={15} >
-                   <BarChart data={barChartConfig} xLabel="type" yLabel="sales" title="Ordenes"/>
+                   <BarChart data={barChartConfig} xLabel="type" yLabel="sales" title="Ordenes" onDataClick={handlePointClick} />
                 </Col>
                 <Col span={9}>
-                    <TableTop topData={TableTopData} title="Top Productos"/>
+                    <TableTop topData={TableTopData} title="Top Productos" />
                 </Col>
             </Row>
             <Row>
                 <Col span={12}>
-                    <PieChart data={PieData} unitBasePrefix={'$'} title="Más vendidos" />
+                    <PieChart data={PieData} unitBasePrefix={'$'} title="Más vendidos" onDataClick={handlePointClick}/>
                 </Col>
                 <Col span={6}>
-                    <PieChart data={PieData2} unitBasePrefix={'$'} title="Top Marketplace $"/>
+                    <PieChart data={PieData2} unitBasePrefix={'$'} title="Top Marketplace $" onDataClick={handlePointClick}/>
                 </Col>
                 <Col span={6}>
-                    <PieChart data={PieData3} unitBasePrefix={'$'} title="Top Paises $" legendPosition='right' />
+                    <PieChart data={PieData3} unitBasePrefix={'$'} title="Top Paises $" legendPosition='right' onDataClick={handlePointClick}/>
                 </Col>
             </Row>
         </>
