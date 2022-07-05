@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './analytics.css';
 import 'antd/dist/antd.css';
 import { useTranslation } from 'react-i18next';
@@ -13,8 +13,11 @@ import Visits from './components/Visits';
 import AnalyticsFilter from './components/AnalyticsFilter';
 import DashboardTable from './components/DashboardTable';
 import {ChartsView} from "./components/ChartsView";
+import axios from "axios";
+import * as analyticData from '../../assets/json_ordenes.json'
 
 export const Analytics = () => {
+
 
     const { t } = useTranslation();
     const session = useSelector(store => store.Session.session);
@@ -23,7 +26,7 @@ export const Analytics = () => {
     if (!isAdmin) {
         partnerId = session.userInfo.commercial_partner_id[0]; 
     }
- 
+
     return (
         <div className="content-div">            
             <Row>
@@ -51,7 +54,7 @@ export const Analytics = () => {
             <Row>
                 <Layout className="padding-layout padding-y-0" style={{ width: '100%' }}>
                     <div className="site-layout-background padding-layout-content content-padding margin-top-0 padding-y-0" style={{ width: '100%' }}>
-                        <ChartsView/>
+                        <ChartsView data={analyticData?.default}/>
                     </div>
                 </Layout>
             </Row>

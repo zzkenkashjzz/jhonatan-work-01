@@ -1,0 +1,19 @@
+.indicator .card {
+    padding-bottom: 0;
+}
+
+.indicator .cardHeader {
+    margin-bottom: 0;
+}
+
+.indicator-value {
+    font-size: 55px;
+    color: #3be5a6;
+    margin: 0;
+}
+
+.indicator-title{
+    font-size: 18px;
+    text-transform: uppercase;
+
+}

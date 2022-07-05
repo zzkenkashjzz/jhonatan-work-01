@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './BarChart.css';
 import Card from "../card/Card";
 import CardBody from "../card/cardBody/Card/cardBody";
@@ -6,17 +6,34 @@ import { Column } from '@ant-design/plots';
 import CardHeader from "../card/cardHeader/Card/cardHeader";
 import {Select} from "antd";
 import {Option} from "antd/es/mentions";
+import * as dayjs from 'dayjs'
 
-const BarChart = ({data = [], title, yLabel, xLabel, onDataClick}) => {
+
+const BarChart = (
+    {
+        data = [],
+        title,
+        yLabel,
+        xLabel,
+        defaultFormat = 'MMM',
+        suffixLabel = '',
+        prefixLabel = '',
+        formatterLabel,
+        onDataClick,
+        onChangeFormat
+    }) => {
+
+    const applyGroupingToData = () => {
+        return data.map( value => ({...value, [xLabel]:  dayjs(value[xLabel]).format(defaultFormat)}))
+    }
 
     const max = Math.max(...data.map(item => item[yLabel]))
 
     const config = {
-        data,
+        data: applyGroupingToData(),
         xField: xLabel,
         yField: yLabel,
         columnWidthRatio: 0.8,
-
         xAxis: {
             grid: null,
             label: {
@@ -44,7 +61,19 @@ const BarChart = ({data = [], title, yLabel, xLabel, onDataClick}) => {
             position: 'top',
             style: {
                 fill: '#3be5a6',
-                opacity: 1,
+                fontSize: 18
+            },
+            formatter: (datum => {
+                const total = applyGroupingToData().filter(item => item[xLabel] === datum[xLabel]).map(val => val[yLabel]).reduce((a, b) => a + b, 0);
+                return formatterLabel ?
+                    formatterLabel(data[total])  :
+                    `${prefixLabel}${total}${suffixLabel}`
+            }),
+        },
+        tooltip: {
+            formatter: (datum) => {
+                const quantity = applyGroupingToData().filter(item => item[xLabel] === datum[xLabel]).map(val => val.quantity).reduce((a, b) => a + b, 0);
+                return {name: 'Units', value: quantity};
             },
         },
         interactions: [
@@ -71,19 +100,15 @@ const BarChart = ({data = [], title, yLabel, xLabel, onDataClick}) => {
                     <div className='barChart-header-card'>
                         <h3 className="card-title-custom-title">{title}</h3>
                         <Select
-                            defaultValue="mes"
+                            defaultValue={defaultFormat}
                             style={{
                                 width: 120,
                                 marginLeft: 'auto'
                             }}
-                            onChange={(e) => console.log(e)}
+                            onChange={(e) => onChangeFormat(e)}
                         >
-                            <Option value="jack">Jack</Option>
-                            <Option value="mes">Mes</Option>
-                            <Option value="disabled" disabled>
-                                Disabled
-                            </Option>
-                            <Option value="Yiminghe">yiminghe</Option>
+                            <Option value="MMM">Mes</Option>
+                            <Option value="YYYY">Year</Option>
                         </Select>
                     </div>
                 </CardHeader>

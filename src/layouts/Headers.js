@@ -36,8 +36,8 @@ export const Headers = () => {
                 let link = new String(session.userInfo.website)
                 let arrayBase = link.split('[')
                 if(arrayBase.length > 1){
-                    let newJson = JSON.parse(`[${arrayBase[1]}`)
-                    setDashboardAnalitycs(newJson)
+                    // let newJson = JSON.parse(`[${arrayBase[1]}`)
+                    // setDashboardAnalitycs(newJson)
                 }
             }
         }
