@@ -10,7 +10,7 @@
 }
 
 .table-top td {
-    padding: 3px;
+    padding: 5px;
 }
 
 .table-top th {
@@ -23,4 +23,11 @@ tr {
 
 tr:nth-child(even) {
     background-color: #e8e8e8;
+}
+
+.name-td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

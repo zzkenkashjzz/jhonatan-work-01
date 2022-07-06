@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef2a61fc-12b0-4580-8207-3b056a2cd3ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Indicator/Indicator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Indicator/Indicator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/analytic-helper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Headers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Headers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/analytics/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/analytics/Analytics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BarChart/BarChart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BarChart/BarChart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Indicator/Indicator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Indicator/Indicator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PieChart/PieChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PieChart/PieChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TableTop/TableTop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TableTop/TableTop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TableTop/TableTop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TableTop/TableTop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/analytic-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/analytic-helper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/analytics/components/ChartsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/analytics/components/ChartsView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,9 @@
       <workItem from="1655948703580" duration="8910000" />
       <workItem from="1656042444669" duration="3327000" />
       <workItem from="1656651902303" duration="349000" />
-      <workItem from="1656987529798" duration="16148000" />
+      <workItem from="1656987529798" duration="16322000" />
+      <workItem from="1657048314614" duration="225000" />
+      <workItem from="1657066717818" duration="7849000" />
     </task>
     <servers />
   </component>

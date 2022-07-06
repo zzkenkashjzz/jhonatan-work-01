@@ -58,7 +58,7 @@ export const PieChart = (
                     textOverflow: 'ellipsis',
                     // fontSize: 20,
                 },
-                content: `${unitBasePrefix} ${total} ${unitBaseSuffix}`,
+                content: `${unitBasePrefix} ${Math.round(total * 100) / 100} ${unitBaseSuffix}`,
             },
         },
         legend: {

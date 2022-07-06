@@ -7,19 +7,30 @@ import CardBody from "../../../components/card/cardBody/Card/cardBody";
 import {PieChart} from "../../../components/PieChart/PieChart";
 import {PieData, PieData2, PieData3} from "../../../services/progress-data";
 import {useEffect, useState} from "react";
-import {groupingSalesByPurchaseDate} from "../../../helpers/analytic-helper";
+import {
+    adapterDataPieChart,
+    adapterDataTable,
+    getAllProducts,
+    getAllProductsBySales, getMarketplacesBySales,
+    groupingSalesByPurchaseDate
+} from "../../../helpers/analytic-helper";
 import {Indicator} from "../../../components/Indicator/Indicator";
 
 export const ChartsView = ({data}) => {
 
     const [defaultFormatData, setDefaultFormatData] = useState('MMM')
 
+    useEffect(() => {
+        getMarketplacesBySales(data);
+    })
+
     const handlePointClick = (e) => console.log(e);
 
+    const getSalesForDates = (chartdata) => groupingSalesByPurchaseDate(chartdata);
 
-    const getSalesForDates = (chartdata) => {
-        return groupingSalesByPurchaseDate(chartdata);
-    }
+    const getTopDataTable = (chartData) => adapterDataTable(getAllProducts(chartData));
+
+    const getTopPieChartBySales = (chartData) => adapterDataPieChart(getAllProductsBySales(chartData));
 
     const getSumQuantitySold = (chartdata) => chartdata[0]?.sumQuantitySold;
 
@@ -27,11 +38,11 @@ export const ChartsView = ({data}) => {
 
     return (
         <>
-            <Row>
-                <Col span={12}>
-                    <Indicator value={getSumQuantitySold(data)} suffix=" Units" title="Cantidad de ventas"/>
+            <Row style={{justifyContent: 'center'}}>
+                <Col span={5}>
+                    <Indicator value={getSumQuantitySold(data)} title="Cantidad de ventas"/>
                 </Col>
-                <Col span={12}>
+                <Col span={5}>
                     <Indicator value={getSumTotalSold(data)} prefix="$ " title="Total de ventas"/>
                 </Col>
             </Row>
@@ -50,18 +61,15 @@ export const ChartsView = ({data}) => {
                    />
                 </Col>
                 <Col span={9}>
-                    <TableTop topData={TableTopData} title="Top Productos" />
+                    <TableTop topData={getTopDataTable(data)} title="Top Productos" />
                 </Col>
             </Row>
             <Row>
                 <Col span={12}>
-                    <PieChart data={PieData} unitBasePrefix={'$'} title="Más vendidos" onDataClick={handlePointClick}/>
+                    <PieChart data={getTopPieChartBySales(data)} unitBasePrefix={'$'} title="Más vendidos" onDataClick={handlePointClick}/>
                 </Col>
-                <Col span={6}>
-                    <PieChart data={PieData2} unitBasePrefix={'$'} title="Top Marketplace $" onDataClick={handlePointClick}/>
-                </Col>
-                <Col span={6}>
-                    <PieChart data={PieData3} unitBasePrefix={'$'} title="Top Paises $" legendPosition='right' onDataClick={handlePointClick}/>
+                <Col span={12}>
+                    <PieChart data={getMarketplacesBySales(data)} unitBasePrefix={'$'} title="Top Marketplace $" onDataClick={handlePointClick}/>
                 </Col>
             </Row>
         </>
