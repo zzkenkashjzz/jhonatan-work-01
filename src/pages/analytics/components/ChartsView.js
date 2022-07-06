@@ -32,9 +32,9 @@ export const ChartsView = ({data}) => {
 
     const getTopPieChartBySales = (chartData) => adapterDataPieChart(getAllProductsBySales(chartData));
 
-    const getSumQuantitySold = (chartdata) => chartdata[0]?.sumQuantitySold;
+    const getSumQuantitySold = (chartdata) => new Intl.NumberFormat().format(chartdata[0]?.sumQuantitySold);
 
-    const getSumTotalSold = (chartdata) => chartdata[0]?.sumTotalSold;
+    const getSumTotalSold = (chartdata) => new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(chartdata[0]?.sumTotalSold);
 
     return (
         <>
@@ -43,7 +43,7 @@ export const ChartsView = ({data}) => {
                     <Indicator value={getSumQuantitySold(data)} title="Cantidad de ventas"/>
                 </Col>
                 <Col span={5}>
-                    <Indicator value={getSumTotalSold(data)} prefix="$ " title="Total de ventas"/>
+                    <Indicator value={getSumTotalSold(data)} title="Total de ventas"/>
                 </Col>
             </Row>
             <Row>
@@ -54,8 +54,7 @@ export const ChartsView = ({data}) => {
                        yLabel="sales"
                        title="Ordenes"
                        onDataClick={handlePointClick}
-                       prefixLabel="$ "
-                       suffixLabel=".00"
+                       prefixLabel="$"
                        defaultFormat={defaultFormatData}
                        onChangeFormat={e => setDefaultFormatData(e)}
                    />

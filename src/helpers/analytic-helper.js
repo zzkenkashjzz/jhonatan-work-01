@@ -1,7 +1,7 @@
 import * as dayjs from "dayjs";
 
 export function groupingSalesByPurchaseDate(chartdata) {
-    const newData = [];
+    let newData = [];
     // change child?.quantityByPurchaseDate for child?.SalesByPurchaseDate
     const salesByPurchaseDate = chartdata.map((dat) => dat.children.map((child) => child.quantityByPurchaseDate)).flat()
     const quantityByPurchaseDate = chartdata.map((dat) => dat.children.map((child) => child.quantityByPurchaseDate)).flat();
@@ -16,7 +16,10 @@ export function groupingSalesByPurchaseDate(chartdata) {
         }
     })
     const currentYear = dayjs().format('YYYY');
-    return sortDataByDate(newData.filter(value => dayjs(value.type).format('YYYY') === currentYear))
+    newData = newData.filter(value => dayjs(value.type).format('YYYY') === currentYear)
+
+
+    return sortDataByDate([...newData, ...monthsNameAbbreviations])
 }
 
 
@@ -61,7 +64,11 @@ export function getAllProductsBySales(chartdata) {
 }
 
 export function adapterDataPieChart(data) {
-    return data.map((item) => ({type: item.sku, value:item.sumTotalSold })).slice(0, 10)
+    return data.map((item) => ({
+            type: item.sku,
+            value: item.sumTotalSold
+        })
+    ).slice(0, 10)
 }
 
 
@@ -69,3 +76,20 @@ export function getMarketplacesBySales(chartdata) {
     const marketsArray = chartdata.map(dat => dat.children).flat();
     return marketsArray.map(market => ({type: market.name, value: market.sumTotalSold}))
 }
+
+
+export const monthsNameAbbreviations =  [
+    {type: `${dayjs().get('year')}-01-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-02-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-03-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-04-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-05-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-06-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-07-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-08-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-09-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-10-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-11-01`, sales: 0, quantity: 0},
+    {type: `${dayjs().get('year')}-12-01`, sales: 0, quantity: 0},
+
+]

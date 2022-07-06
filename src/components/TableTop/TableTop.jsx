@@ -21,7 +21,7 @@ export const TableTop = ({topData = [], range = [0, 10], title}) => {
                             <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td className="name-td">{data.name}</td>
-                                <td>{data.units}</td>
+                                <td>{new Intl.NumberFormat().format(data.units)}</td>
                             </tr>
                         ))}
                     </table>

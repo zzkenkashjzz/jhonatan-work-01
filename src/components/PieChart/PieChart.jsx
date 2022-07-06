@@ -58,7 +58,7 @@ export const PieChart = (
                     textOverflow: 'ellipsis',
                     // fontSize: 20,
                 },
-                content: `${unitBasePrefix} ${Math.round(total * 100) / 100} ${unitBaseSuffix}`,
+                content: `${unitBasePrefix}${new Intl.NumberFormat().format(Math.round(total * 100) / 100)} ${unitBaseSuffix}`,
             },
         },
         legend: {
@@ -67,7 +67,7 @@ export const PieChart = (
             itemValue: {
                 formatter: (text, item) => {
                     const items = data.filter((d) => d.type === item.value)[0];
-                    return `- ${items.value}`
+                    return `- ${unitBasePrefix}${ new Intl.NumberFormat().format(items.value)}`
                 },
                 // style: {
                 //     opacity: 0.65,

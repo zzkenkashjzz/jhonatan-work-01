@@ -7,6 +7,7 @@ import CardHeader from "../card/cardHeader/Card/cardHeader";
 import {Select} from "antd";
 import {Option} from "antd/es/mentions";
 import * as dayjs from 'dayjs'
+import {monthsNameAbbreviations} from "../../helpers/analytic-helper";
 
 
 const BarChart = (
@@ -24,7 +25,8 @@ const BarChart = (
     }) => {
 
     const applyGroupingToData = () => {
-        return data.map( value => ({...value, [xLabel]:  dayjs(value[xLabel]).format(defaultFormat)}))
+        const groupingData = data.map( value => ({...value, [xLabel]:  dayjs(value[xLabel]).format(defaultFormat)}))
+        return groupingData
     }
 
     const max = Math.max(...data.map(item => item[yLabel]))
@@ -33,7 +35,6 @@ const BarChart = (
         data: applyGroupingToData(),
         xField: xLabel,
         yField: yLabel,
-        columnWidthRatio: 0.8,
         xAxis: {
             grid: null,
             label: {
@@ -59,21 +60,22 @@ const BarChart = (
         },
         label: {
             position: 'top',
+            layout: 'overlap',
             style: {
                 fill: '#3be5a6',
-                fontSize: 18
+                fontSize: 12,
             },
             formatter: (datum => {
                 const total = applyGroupingToData().filter(item => item[xLabel] === datum[xLabel]).map(val => val[yLabel]).reduce((a, b) => a + b, 0);
                 return formatterLabel ?
                     formatterLabel(data[total])  :
-                    `${prefixLabel}${total}${suffixLabel}`
+                    `${prefixLabel}${new Intl.NumberFormat().format(total)}${suffixLabel}`
             }),
         },
         tooltip: {
             formatter: (datum) => {
                 const quantity = applyGroupingToData().filter(item => item[xLabel] === datum[xLabel]).map(val => val.quantity).reduce((a, b) => a + b, 0);
-                return {name: 'Units', value: quantity};
+                return {name: 'Units', value: new Intl.NumberFormat().format(quantity)};
             },
         },
         interactions: [
