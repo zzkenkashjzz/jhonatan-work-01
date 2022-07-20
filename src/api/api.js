@@ -5,7 +5,7 @@ const instance = axios.create({
     baseURL: apiUrl,
 });
 
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
 instance.defaults.withCredentials = false;
 
 export async function initAxiosInterceptors(token, language) {
